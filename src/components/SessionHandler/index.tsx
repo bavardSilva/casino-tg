@@ -40,7 +40,7 @@ const SessionHandler = () => {
     const name = tg.initDataUnsafe.user.first_name;
     const defaultAvatar = "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50";
     if(id){
-      axios.post(`${process.env.REACT_APP_SERVER_URL}/items`, {user_id: id.toString()}).then((res)=>{
+      axios.post(`${process.env.REACT_APP_SERVER_URL}/api/items`, {user_id: id.toString()}).then((res)=>{
         console.log(res.data)
         const data = res.data;
         let user ={

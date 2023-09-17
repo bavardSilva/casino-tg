@@ -54,7 +54,7 @@ const Deposit = () => {
         setAmount('50')
         return setError(t('dep-error'));
     }
-    axios.post(`${process.env.REACT_APP_SERVER_URL}/pay`, {
+    axios.post(`${process.env.REACT_APP_SERVER_URL}/api/pay`, {
       amount,
       user_id: user.id
     }).then((res: any)=>{
